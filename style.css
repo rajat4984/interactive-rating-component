@@ -89,7 +89,7 @@ img {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .num-item:hover {
