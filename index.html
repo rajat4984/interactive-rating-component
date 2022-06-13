@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="rating-card">
+        <img src="./images/icon-star.svg" alt="start" class="start-logo" />
+        <h2 class="rating-title">How did we do?</h2>
+        <p class="rating-desc">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <ul class="num-container">
+          <li class="num-item active">1</li>
+          <li class="num-item">2</li>
+          <li class="num-item">3</li>
+          <li class="num-item">4</li>
+          <li class="num-item">5</li>
+        </ul>
+        <button type="submit" class="rating-btn" onclick="handleSubmit()">
+          Submit
+        </button>
+      </div>
+
+      <div class="thanks-card">
+        <img
+          src="./images/illustration-thank-you.svg"
+          alt="mobile"
+          class="thanks-img"
+        />
+        <p class="selected-text">
+          You selected <span class="rating-num">0</span> out of 5
+        </p>
+        <h2 class="thanks-title">Thank you!</h2>
+        <p class="thanks-desc">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/rajat4984">Rajat Sharma</a>.
+    </div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"
+  >
+    $(document).ready(function(){
+      $("li").on("click",function(){
+        $(this).siblings().removeClass("active")
+        $(this).addClass("active")
+      })
+    })
+  </script>
+</html>
