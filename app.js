@@ -5,6 +5,8 @@ const numItem = Array.from(document.querySelectorAll(".num-item"));
 let reviewNum = 0;
 
 const handleNum = (e)=>{
+    document.querySelector('.active').classList.remove('active')
+    e.target.classList.add('active')
    reviewNum = e.target.textContent;
 
 }
